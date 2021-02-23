@@ -1,25 +1,23 @@
 <template>
 
     <ShastaNav />
-    <div id="firebaseui-auth-container" class="login-wrapper"></div>
-    <pre id="account-details"></pre>
-    <button id="logout">Logout</button>
-    <!-- <ShastaLogin /> -->
+    <ShastaLogin />
     <router-view />
 
 </template>
 
 <script>
     import ShastaNav from "./components/ShastaNav"
-    // import ShastaLogin from "./components/ShastaLogin"
+    import ShastaLogin from "./components/ShastaLogin"
 
+    // Für User Authentication
     import firebase from './utilities/firebase'
     import * as firebaseui from 'firebaseui'
 
     export default {
         components: {
             ShastaNav,
-            // ShastaLogin
+            ShastaLogin
         },
         data() {
             return {}
@@ -27,9 +25,14 @@
         mounted() {
             const auth = firebase.auth();
             
+            // Start MOVE
+            // Move to ./components/ShastaLogoutBtn
             const logout = document.querySelector( "#logout" ) // Alt, jetzt mit mehreren Logout Buttons
             logout.onclick = () => { auth.signOut() } // Alt, jetzt mit mehreren Logout Buttons
+            // End MOVE
 
+            // Start MOVE
+            // Start REFACTOR else
             const uiConfig = { // Single Page App
                 signInSuccessUrl: 'http://localhost:8080/#/',
                 // signInSuccessUrl: 'https://shasta-b28e4.web.app/',
@@ -45,6 +48,7 @@
                     // window.location.assign('https://shasta-b28e4.web.app/#datenschutz');
                 }
             }
+            // End MOVE
             // Tracking Auth State
             const initApp = function() {
                 firebase.auth().onAuthStateChanged(function(user) {
