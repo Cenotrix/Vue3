@@ -1,5 +1,7 @@
 <template>
-    header
+    <p>
+        About Inhalt
+    </p>
 </template>
 
 <script>

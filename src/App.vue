@@ -1,18 +1,16 @@
 <template>
 
-    <AppHeader />
-    <AppHeroes />
+    <ShastaNav />
+    <router-view />
 
 </template>
 
 <script>
-    import AppHeader from "./components/AppHeader"
-    import AppHeroes from "./components/AppHeroes"
+    import ShastaNav from "./components/ShastaNav"
 
     export default {
         components: {
-            AppHeader,
-            AppHeroes
+            ShastaNav
         },
         data() {
             return {}
@@ -21,3 +19,7 @@
         computed: {}
     }
 </script>
+
+<style>
+
+</style>
