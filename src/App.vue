@@ -15,6 +15,17 @@
             <router-view />
             <ShastaFooter />
         </div>
+        <Button
+            @click="renderOptions"
+            class="layout-option-button" 
+            style="
+                position: fixed;
+                top: 50%;
+                right: 0;
+                display: inline;"
+            icon="pi pi-cog"
+            iconPos="right" 
+        />
     </div>
 
 </template>
@@ -25,6 +36,8 @@
     import ShastaLogin from "./components/ShastaLogin"
     import ShastaTopbar from "./components/ShastaTopbar"
     import ShastaFooter from "./components/ShastaFooter"
+    // PrimeVue
+    import Button from 'primevue/button'
 
     // Für User Authentication
     import firebase from "./utilities/firebase"
@@ -35,7 +48,9 @@
             ShastaLogin,
             ShastaSidebar,
             ShastaTopbar,
-            ShastaFooter
+            ShastaFooter,
+            // PrimeVue
+            Button,
         },
         data() {
             return {
@@ -44,7 +59,11 @@
                 user: {}
             }
         },
-        methods: {},
+        methods: {
+            renderOptions() {
+                console.log(`Test`)
+            }
+        },
         computed: {},
         mounted() { // User Auth
             firebase.auth().onAuthStateChanged( user => {

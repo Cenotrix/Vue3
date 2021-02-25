@@ -27,15 +27,6 @@
                 menu: routes
             }
         },
-        methods: {
-
-        },
-        computed: {
-
-        },
-        mounted() {
-            console.log( this.menu )
-        }
     }
 </script>
 

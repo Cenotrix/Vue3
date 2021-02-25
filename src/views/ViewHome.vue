@@ -1,13 +1,12 @@
 <template>
-    <div>
-        Willkommen auf der Homepage
+    <div class="view-content">
     </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+
+}
 </script>
 
 <style>

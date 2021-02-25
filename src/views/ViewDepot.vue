@@ -1,7 +1,6 @@
 <template>
     
     <Calendar v-model="date" :inline="true" />
-    <button @click="logDate">Log Date</button>
     <div class="p-shadow-1">
         Depot: 14552,03€
     </div>
@@ -13,18 +12,14 @@
 
     export default {
         components: {
-            Calendar
+            Calendar,
         },
         data() {
             return {
-                date: null
+                date: new Date()
             }
         },
-        methods: {
-            logDate() {
-                console.log(`${this.date}`)
-            }
-        }
+        methods: {}
     }
 </script>
 

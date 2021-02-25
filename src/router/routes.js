@@ -3,6 +3,7 @@ import ViewAbout from "../views/ViewAbout"
 import ViewStocks from "../views/ViewStocks"
 import ViewAccount from "../views/ViewAccount"
 import ViewDepot from "../views/ViewDepot"
+import ViewNews from "../views/ViewNews"
 
 const routes = [
     {
@@ -34,6 +35,12 @@ const routes = [
         name: 'Account',
         component: ViewAccount,
         icon: 'pi pi-cog'
+    },
+    {
+        path: '/news',
+        name: 'News',
+        component: ViewNews,
+        icon: 'pi pi-bookmark'
     },
 ]
 
