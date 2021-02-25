@@ -17,19 +17,11 @@ export default {
 </script>
 
 <style scoped>
-    #ShastaRenderLoader {
-        /* --primary-color: #fff; */
-        --primary-color: #bada55;
-        /* --secondary-color: #bada55; */
-        --secondary-color: #333;
-    }
-
     body, html {
         margin: 0;
         padding: 0;
         width: 100%;
         height: 100%;
-        background: var(--secondary-color);
         font-size: 10px;
         display: flex;
         justify-content: center;

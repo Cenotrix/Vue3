@@ -1,7 +1,5 @@
 <template>
-    <div class="layout-content-wrapper">
-        
-    </div>
+    Account
 </template>
 
 <script>

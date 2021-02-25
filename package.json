@@ -11,6 +11,9 @@
     "core-js": "^3.6.5",
     "firebase": "^8.2.9",
     "firebaseui": "^4.7.3",
+    "normalize-css": "^2.3.1",
+    "primeicons": "^4.1.0",
+    "primevue": "^3.3.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.4"
   },

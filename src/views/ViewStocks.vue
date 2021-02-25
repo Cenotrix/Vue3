@@ -1,6 +1,6 @@
 <template>
-    <div class="layout-content-wrapper">
-        
+    <div class="layout-content">
+        Stocks werden hier angezeigt.
     </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-    <footer class="ShastaFooter">
-
-    </footer>
+    <div class="layout-footer">
+        Footer
+    </div>
 </template>
 
 <script>

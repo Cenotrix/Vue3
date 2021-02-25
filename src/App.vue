@@ -1,26 +1,30 @@
 <template>
 
-    <div v-if="!render">
+    <div v-if="!rendered">
         <ShastaRenderLoader />
     </div>
 
-    <div v-if="!loggedIn && render">
+    <div v-if="!loggedIn && rendered">
         <ShastaLogin />
     </div>
     
-    <div v-if="loggedIn && render">
-        <ShastaHeader />
-        <router-view />
-        <ShastaFooter />
+    <div class="layout-wrapper" v-if="loggedIn && rendered">
+        <ShastaSidebar />
+        <div class="layout-content-wrapper">
+            <ShastaTopbar />
+            <router-view />
+            <ShastaFooter />
+        </div>
     </div>
 
 </template>
 
 <script>
     import ShastaRenderLoader from "./components/ShastaRenderLoader"
-    import ShastaHeader from "./components/ShastaHeader"
-    import ShastaFooter from "./components/ShastaFooter"
+    import ShastaSidebar from "./components/ShastaSidebar"
     import ShastaLogin from "./components/ShastaLogin"
+    import ShastaTopbar from "./components/ShastaTopbar"
+    import ShastaFooter from "./components/ShastaFooter"
 
     // Für User Authentication
     import firebase from "./utilities/firebase"
@@ -28,13 +32,14 @@
     export default {
         components: {
             ShastaRenderLoader,
-            ShastaHeader,
-            ShastaFooter,
-            ShastaLogin
+            ShastaLogin,
+            ShastaSidebar,
+            ShastaTopbar,
+            ShastaFooter
         },
         data() {
             return {
-                render: false,
+                rendered: false,
                 loggedIn: false,
                 user: {}
             }
@@ -67,10 +72,10 @@
                         });
                     this.user = user
                     this.loggedIn = true
-                    this.render = true
+                    this.rendered = true
                 } else {
                     this.loggedIn = false;
-                    this.render = true
+                    this.rendered = true
                 }
             }, function(error) {
                 console.log(error);
@@ -80,5 +85,23 @@
 </script>
 
 <style>
+    .layout-wrapper {
+        min-height: 100vh;
+        display: flex;
+    }
 
+    .layout-content-wrapper {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .layout-sidebar {
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 </style>

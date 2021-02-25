@@ -1,6 +1,6 @@
 <template>
-    <div class="layout-content-wrapper">
-        
+    <div class="layout-topbar">
+        Topbar
     </div>
 </template>
 
