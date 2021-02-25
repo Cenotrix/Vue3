@@ -3,7 +3,7 @@
     <header class="ShastaHeader">
         <ShastaLogo />
         <ShastaNav />
-        <ShastaLogout />
+        <!-- <ShastaLogout /> -->
     </header>
 
 </template>
@@ -11,17 +11,19 @@
 <script>
 import ShastaLogo from "./ShastaLogo"
 import ShastaNav from "./ShastaNav"
-import ShastaLogout from "./ShastaLogout"
+// import ShastaLogout from "./ShastaLogout"
 
 export default {
     components: {
         ShastaLogo,
         ShastaNav,
-        ShastaLogout,
+        // ShastaLogout,
     }
 }
 </script>
 
-<style>
-
+<style scoped>
+    header {
+        display: flex;
+    }
 </style>
