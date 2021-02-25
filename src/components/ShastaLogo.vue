@@ -1,7 +1,5 @@
 <template>
-    <footer class="ShastaFooter">
-
-    </footer>
+    <img src="" alt="Logo">
 </template>
 
 <script>

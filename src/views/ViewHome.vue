@@ -1,11 +1,10 @@
 <template>
     <div>
-        
+        Willkommen auf der Homepage
     </div>
 </template>
 
 <script>
-    console.log(`Auf View: Home`);
     export default {
         
     }

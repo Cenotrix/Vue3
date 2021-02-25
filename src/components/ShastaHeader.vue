@@ -1,14 +1,21 @@
 <template>
-    <ShastaNav />
-    <ShastaLogout />
+
+    <header class="ShastaHeader">
+        <ShastaLogo />
+        <ShastaNav />
+        <ShastaLogout />
+    </header>
+
 </template>
 
 <script>
-import ShastaNav from './ShastaNav'
-import ShastaLogout from './ShastaLogout'
+import ShastaLogo from "./ShastaLogo"
+import ShastaNav from "./ShastaNav"
+import ShastaLogout from "./ShastaLogout"
 
 export default {
     components: {
+        ShastaLogo,
         ShastaNav,
         ShastaLogout,
     }

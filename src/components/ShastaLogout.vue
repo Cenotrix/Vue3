@@ -1,9 +1,9 @@
 <template>
-    <button @click="logout">Logout</button>
+    <button class="ShastaLogout" @click="logout">Logout</button>
 </template>
 
 <script>
-import firebase from '../utilities/firebase'
+import firebase from "../utilities/firebase"
 
 export default {
     data() {
@@ -22,7 +22,5 @@ export default {
 </script>
 
 <style scoped>
-    button {
-        padding: 5px;
-    }
+    
 </style>

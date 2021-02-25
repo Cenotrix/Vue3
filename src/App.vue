@@ -1,36 +1,47 @@
 <template>
 
-    <ShastaHeader v-if="loggedIn" />
-    <ShastaLogin v-if="!loggedIn" />
-    <router-view v-if="loggedIn"/>
-    <ShastaFooter v-if="loggedIn" />
+    <div v-if="!render">
+        <ShastaRenderLoader />
+    </div>
+
+    <div v-if="!loggedIn && render">
+        <ShastaLogin />
+    </div>
+    
+    <div v-if="loggedIn && render">
+        <ShastaHeader />
+        <router-view />
+        <ShastaFooter />
+    </div>
 
 </template>
 
 <script>
+    import ShastaRenderLoader from "./components/ShastaRenderLoader"
     import ShastaHeader from "./components/ShastaHeader"
     import ShastaFooter from "./components/ShastaFooter"
-
     import ShastaLogin from "./components/ShastaLogin"
 
     // Für User Authentication
-    import firebase from './utilities/firebase'
+    import firebase from "./utilities/firebase"
 
     export default {
         components: {
+            ShastaRenderLoader,
             ShastaHeader,
             ShastaFooter,
             ShastaLogin
         },
         data() {
             return {
-                loggedIn: true,
+                render: false,
+                loggedIn: false,
                 user: {}
             }
         },
         methods: {},
         computed: {},
-        mounted() {
+        mounted() { // User Auth
             firebase.auth().onAuthStateChanged( user => {
                 if ( user ) {
                     var displayName = user.displayName;
@@ -56,8 +67,10 @@
                         });
                     this.user = user
                     this.loggedIn = true
+                    this.render = true
                 } else {
                     this.loggedIn = false;
+                    this.render = true
                 }
             }, function(error) {
                 console.log(error);
@@ -67,5 +80,5 @@
 </script>
 
 <style>
-    
+
 </style>

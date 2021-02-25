@@ -3,8 +3,8 @@
 </template>
 
 <script>
-    import * as firebaseui from 'firebaseui'
-    import firebase from '../utilities/firebase'
+    import * as firebaseui from "firebaseui"
+    import firebase from "../utilities/firebase"
 
     export default {
         data() {
