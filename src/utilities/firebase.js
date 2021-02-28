@@ -6,7 +6,6 @@ import firebase from "firebase/app";
 const firebaseConfig = {
     apiKey: "AIzaSyDi_pDzrvRsY73L3eaD05qbsWGV-m54neU",
     authDomain: "shasta-b28e4.firebaseapp.com",
-    databaseURL: "https://shasta-b28e4-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "shasta-b28e4",
     storageBucket: "shasta-b28e4.appspot.com",
     messagingSenderId: "430970252552",

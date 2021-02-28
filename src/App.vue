@@ -1,63 +1,58 @@
 <template>
 
-    <LoadSpinner v-if="!isRendered" />
+    <!--<LoadSpinner />-->
 
-    <Login :user="user"/>
+    <Login  v-model:user="user" />
 
-    <Logout v-if="isLoggedIn" />
-    <div
-        @logInUser="logInUser"
-    ><!--Vue Event Handler--></div>
+    <Logout />
+    <div><!--Vue Event Handler--></div>
     <!--Basicly die Root-->
-    <div class="layout-wrapper" 
-        v-if="isLoggedIn && isRendered"
+    <!--
+    <div 
+        class="layout-wrapper"
     >
         <LayoutSidebar />
         <div class="layout-content-wrapper">
             <LayoutContentHeader />
-            <!--LayoutContent--><router-view class="layout-content" />
+            <router-view class="layout-content" />
             <LayoutContentFooter />
         </div>
     </div>
-
+-->
 </template>
 
 <script>
     // Utilites
-    import LoadSpinner from "./utilities/LoadSpinner"
+    //import LoadSpinner from "./utilities/LoadSpinner"
     import Login from "./utilities/Login"
     import Logout from "./utilities/Logout"
 
     // Layout
-    import LayoutSidebar from "./components/LayoutSidebar"
-    import LayoutContentHeader from "./components/LayoutContentHeader"
-    import LayoutContentFooter from "./components/LayoutContentFooter"
+    //import LayoutSidebar from "./components/LayoutSidebar"
+    //import LayoutContentHeader from "./components/LayoutContentHeader"
+    //import LayoutContentFooter from "./components/LayoutContentFooter"
 
     // PrimeVue
 
     export default {
         components: {
             // Utilities
-            LoadSpinner,
+            //LoadSpinner,
             Login,
             Logout,
             // Layout
-            LayoutSidebar,
-            LayoutContentHeader,
-            LayoutContentFooter,
+            //LayoutSidebar,
+            //LayoutContentHeader,
+            //LayoutContentFooter,
             // PrimeVue
         },
         data() {
             return {
-                isRendered: true,
-                isLoggedIn: false,
                 user: {}
             }
         },
         methods: {
-            logInUser() {
-                console.log(`LogInEvent`)
-            }
+
         },
         computed: {},
         mounted() {}
