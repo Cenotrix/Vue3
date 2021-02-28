@@ -1,13 +1,13 @@
 <template>
-    <div class="layout-topbar">
+    <div class="layout-header">
         Topbar
     </div>
 </template>
 
 <script>
-export default {
+    export default {
 
-}
+    }
 </script>
 
 <style>

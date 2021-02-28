@@ -39,7 +39,6 @@
             // Fetch news
             // .collection("news")
             // .orderBy("created", "desc")
-
         }
     }
 </script>
