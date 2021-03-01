@@ -1,9 +1,28 @@
 @import "../../node_modules/normalize-css/normalize.css";
 
 :root {
-    --primary-color: #BADA55;
-    --secondary-color: #fff;
-    --font-color: #333;
+    --surface-a:#1f2d40;
+    --surface-b:#17212f;
+    --surface-c:rgba(255, 255, 255, 0.03);
+    --surface-d:#304562;
+    --surface-e:#1f2d40;
+    --surface-f:#1f2d40;
+    --text-color:rgba(255, 255, 255, 0.87);
+    --text-color-secondary:rgba(255, 255, 255, 0.6);
+    --primary-color:#81C784;
+    --primary-color-text:#212529;
+    --font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    --surface-0: #000000;
+    --surface-50: #030406;
+    --surface-100: #06090d;
+    --surface-200: #0c121a;
+    --surface-300: #131b26;
+    --surface-400: #192433;
+    --surface-500: #1f2d40;
+    --surface-600: #4c5766;
+    --surface-700: #79818c;
+    --surface-800: #a5abb3;
+    --surface-900: #d2d5d9;
 }
 
 body {

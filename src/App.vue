@@ -1,15 +1,14 @@
 <template>
 
-    <!--<LoadSpinner />-->
-
-    <Login  v-model:user="user" />
-
+    <LoadSpinner v-if="!isRendered" />
     <Logout />
+
     <div><!--Vue Event Handler--></div>
     <!--Basicly die Root-->
-    <!--
+    
     <div 
         class="layout-wrapper"
+        v-if="isRendered"
     >
         <LayoutSidebar />
         <div class="layout-content-wrapper">
@@ -18,44 +17,42 @@
             <LayoutContentFooter />
         </div>
     </div>
--->
+
 </template>
 
 <script>
     // Utilites
-    //import LoadSpinner from "./utilities/LoadSpinner"
-    import Login from "./utilities/Login"
+    import LoadSpinner from "./utilities/LoadSpinner"
     import Logout from "./utilities/Logout"
 
     // Layout
-    //import LayoutSidebar from "./components/LayoutSidebar"
-    //import LayoutContentHeader from "./components/LayoutContentHeader"
-    //import LayoutContentFooter from "./components/LayoutContentFooter"
+    import LayoutSidebar from "./components/LayoutSidebar"
+    import LayoutContentHeader from "./components/LayoutContentHeader"
+    import LayoutContentFooter from "./components/LayoutContentFooter"
 
     // PrimeVue
 
     export default {
         components: {
             // Utilities
-            //LoadSpinner,
-            Login,
+            LoadSpinner,
             Logout,
             // Layout
-            //LayoutSidebar,
-            //LayoutContentHeader,
-            //LayoutContentFooter,
+            LayoutSidebar,
+            LayoutContentHeader,
+            LayoutContentFooter,
             // PrimeVue
         },
         data() {
             return {
-                user: {}
+                isRendered: false,
             }
         },
-        methods: {
-
+        mounted() {
+            console.log(this.user)
         },
+        methods: {},
         computed: {},
-        mounted() {}
     }
 </script>
 
